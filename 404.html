@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
 
     <script>
-        document.getElementById('originLink').href = location.origin;
         if (location.pathname.startsWith('/modul/')) {
             sessionStorage.redirect = location.href;
             location.replace(location.origin + '/modul');
@@ -20,5 +19,10 @@
     </p>
 </body>
 
+<script>
+    (function () {
+        document.getElementById('originlink').href = location.origin;
+    })();
+</script>
 
 </html>
