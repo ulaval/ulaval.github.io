@@ -4,13 +4,26 @@
 <head>
     <title>MODUL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/modul" >
+    <base href="/modul">
 </head>
 
 <body>
     <div id="main" class="modul-container">
         <div id="vue"></div>
     </div>
-<script type="text/javascript" src="https://contenu.monportail.at.ulaval.ca/mpo/@ulaval/modul-website/dev-SNAPSHOT/app.js"></script></body>
+    <script type="text/javascript" src="https://contenu.monportail.at.ulaval.ca/mpo/@ulaval/modul-website/dev-SNAPSHOT/app.js"></script>
+</body>
+<script>
+    (function () {
+        var redirect = sessionStorage.redirect;
+        console.log('load', redirect);
+        console.log('load-href', location.href);
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+            console('history.replage', redirect);
+            history.replaceState(null, null, redirect);
+        }
+    })();
+</script>
 
 </html>
