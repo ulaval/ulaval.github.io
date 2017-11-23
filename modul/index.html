@@ -16,11 +16,8 @@
 <script>
     (function () {
         var redirect = sessionStorage.redirect;
-        console.log('load', redirect);
-        console.log('load-href', location.href);
         delete sessionStorage.redirect;
         if (redirect && redirect != location.href) {
-            console.log('history.replage', redirect);
             history.replaceState(null, null, redirect);
         }
     })();
