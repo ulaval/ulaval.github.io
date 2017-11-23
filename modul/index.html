@@ -20,7 +20,7 @@
         console.log('load-href', location.href);
         delete sessionStorage.redirect;
         if (redirect && redirect != location.href) {
-            console('history.replage', redirect);
+            console.log('history.replage', redirect);
             history.replaceState(null, null, redirect);
         }
     })();
