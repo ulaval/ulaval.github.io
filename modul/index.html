@@ -2,17 +2,24 @@
 <html>
 
 <head>
-    <title>MODUL</title>
+    <title>modUL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/modul">
+    <link href="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/latest/js/fr.js" rel=prefetch>
+    <link href="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/latest/app.js" rel=preload
+        as=script>
+    <link href="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/latest/js/chunk-vendors.js"
+        rel=preload as=script>
 </head>
 
 <body class="m-u--app-body">
-    <div id="main" class="modul-container">
-        <div id="vue"></div>
-    </div>
-    <script type="text/javascript" src="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/latest/app.js"></script>
+    <div id="vue"></div>
+    <script src="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/website/js/chunk-vendors.js">
+    </script>
+    <script src="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/website/app.js">
+    </script>
 </body>
+
 <script>
     (function () {
         var redirect = sessionStorage.redirect;
