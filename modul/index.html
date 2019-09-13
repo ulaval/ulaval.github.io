@@ -15,15 +15,6 @@
     <script src="https://contenu.monportail.ulaval.ca/mpo/packages/@ulaval/modul-website/latest/app.js">
     </script>
 
-<script>
-    (function () {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-            history.replaceState(null, null, redirect);
-        }
-    })();
-</script>
 </body>
 
 
